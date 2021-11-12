@@ -17,7 +17,7 @@ Minio
 2. thanos-receive-ingestor
 3. 
 # Network Topology
-[Markdown](https://github.com/marco210/kube-thanos-k8s/blob/main/images/2021-11-12%2010_15_03-kube-thanos.png)
+![Markdown](https://github.com/marco210/kube-thanos-k8s/blob/main/images/2021-11-12%2010_15_03-kube-thanos.png)
 # Prerequisites
 Create namespace `thanos`
 > kubectl create namespace thanos
