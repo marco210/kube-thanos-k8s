@@ -83,3 +83,6 @@ ii. chown -R ansible /mnt/minio-data\
 1. thanos-query-serviceMonitor.yaml
 2. thanos-store-serviceMonitor.yaml
 3. thanos-compact-serviceMonitor.yaml
+
+# REFRENCES
+https://github.com/thanos-io/kube-thanos
