@@ -20,6 +20,7 @@ Minio
 
 # Prerequisites
 Create namespace `thanos`
+> kubectl create namespace thanos
 Prometheus config:
 >remoteWrite: \
 >  \- url: "http://thanos-receive-router.thanos.svc.cluster.local:19291/api/v1/receive"`
@@ -39,3 +40,46 @@ ii. chown -R ansible /mnt/minio-data\
 2. thanos-receive-pv.yaml
 3. minio-pv.yaml
 4. minio-pvc.yaml
+### Create config
+1. secret.yaml
+2. thanos-receive-router-configmap.yaml
+
+### Create Thanos-receive-router
+1. thanos-receive-router-service.yaml
+2. thanos-receive-router-serviceAccount.yaml
+3. thanos-receive-router-deployment.yaml
+
+### Create Thanos-receive-ingestor
+1. thanos-receive-ingestor-default-service.yaml
+2. thanos-receive-ingestor-serviceAccount.yaml
+3. thanos-receive-ingestor-default-statefulSet.yaml
+
+### Create Thanos-bucket
+1. thanos-bucket-service.yaml
+2. thanos-bucket-serviceAccount.yaml
+3. thanos-bucket-deployment.yaml
+
+### Create S3 Storage minio
+1. minio-service.yaml
+2. minio.yaml
+
+### Create Thanos-Store
+1. thanos-store-service.yaml
+2. thanos-store-serviceAccount.yaml
+3. thanos-store-statefulSet.yaml
+
+### Create Thanos-Query
+1. thanos-query-service.yaml
+2. thanos-query-serviceAccount.yaml
+3. thanos-query-deployment.yaml
+
+### Create Thanos-Compact
+1. thanos-compact-service.yaml
+2. compact-serviceAccount.yaml
+3. thanos-compact-statefulSet.yaml
+
+
+### Create ServiceMonitor
+1. thanos-query-serviceMonitor.yaml
+2. thanos-store-serviceMonitor.yaml
+3. thanos-compact-serviceMonitor.yaml
