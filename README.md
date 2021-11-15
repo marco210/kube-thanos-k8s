@@ -13,9 +13,12 @@ Minio
 
 ### Kubernetes
 #### Service
-1. thanos-receive-router
-2. thanos-receive-ingestor
-3. 
+1. Ingress Controller\
+i. Allow access `Thanos-Query` throw domain `thanos-query-k8s.io`
+2. Thanos-receive-router svc
+3. Thanos-receive-ingestor svc
+4. Thanos-store svc
+
 # Network Topology
 ![Markdown](https://github.com/marco210/kube-thanos-k8s/blob/main/images/2021-11-12%2010_15_03-kube-thanos.png)
 # Prerequisites
